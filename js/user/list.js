@@ -9,7 +9,7 @@ var UserList = React.createClass({displayName: 'UserList',
         	type: 'GET',
     		crossDomain: true,
             url: this.props.url,
-            dataType: 'json',
+            dataType: 'jsonp',
             success: function(data) {
                 this.setState({
                     data: data.data
