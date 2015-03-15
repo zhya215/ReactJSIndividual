@@ -6,6 +6,8 @@ var UserList = React.createClass({displayName: 'UserList',
   
     componentDidMount: function() {
         $.ajax({
+        	type: 'GET',
+    		crossDomain: true,
             url: this.props.url,
             dataType: 'json',
             success: function(data) {
@@ -16,13 +18,13 @@ var UserList = React.createClass({displayName: 'UserList',
             error: function(xhr, status, err) {
                 console.error(this.props.url, status, err.toString());
             }.bind(this),
-            beforeSend: self.setHeader
+            //beforeSend: self.setHeader
         });
     },
 
-    setHeader: function (xhr) {
+    /*setHeader: function (xhr) {
   		xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-	},
+	},*/
 
     handleListItemClicked: function(id){
         var user = _.find(this.state.data, {id: id})
