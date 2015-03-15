@@ -8,9 +8,6 @@ var UserList = React.createClass({displayName: 'UserList',
         $.ajax({
             url: this.props.url,
             dataType: 'json',
-            headers: {
-            	Access-Control-Allow-Origin: "*"
-            },
             success: function(data) {
                 this.setState({
                     data: data.data
@@ -18,9 +15,14 @@ var UserList = React.createClass({displayName: 'UserList',
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this.props.url, status, err.toString());
-            }.bind(this)
+            }.bind(this),
+            beforeSend: self.setHeader
         });
     },
+
+    setHeader: function (xhr) {
+  		xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+	},
 
     handleListItemClicked: function(id){
         var user = _.find(this.state.data, {id: id})
