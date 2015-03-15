@@ -9,7 +9,7 @@ var UserList = React.createClass({displayName: 'UserList',
             url: this.props.url,
             dataType: 'json',
             headers: {
-            	Access-Control-Allow-Origin '*'
+            	Access-Control-Allow-Origin: "*"
             },
             success: function(data) {
                 this.setState({
