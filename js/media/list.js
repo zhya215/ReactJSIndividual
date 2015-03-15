@@ -6,8 +6,10 @@ var MediaList = React.createClass({displayName: 'MediaList',
   
     componentDidMount: function() {
         $.ajax({
+            type: 'GET',
+            crossDomain: true,
             url: this.props.url,
-            dataType: 'json',
+            dataType: 'jsonp',
             success: function(data) {
                 this.setState({
                     data: data.data
