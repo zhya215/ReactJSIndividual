@@ -10,10 +10,12 @@ var UserView = React.createClass({
 
             return ( 
                 <div className="userView" >
-                    <h2 className="userName">
-                        {this.state.user.name}
+                    <h2 className="fullName">
+                        {this.state.user.full_name}
                     </h2>
-                    {this.state.user.yelping_since}
+                    <h2 className="userName">
+                        {this.state.user.username}
+                    </h2>
                 </div>
             )
 

@@ -1,7 +1,7 @@
 doctype html
 html(lang='en')
   head        
-    base(href='/yelp-react/')
+    base(href='/ReactJSIndividual/')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width')     
@@ -15,7 +15,7 @@ html(lang='en')
   body
 
     div.container
-        h1 Yelp
+        h1 Instagram
         include navbar
 
     div.container
@@ -24,15 +24,12 @@ html(lang='en')
     // third-part libraries
     script(src="http://code.jquery.com/jquery.min.js")
     script(src="js/lodash.min.js")
+    script(src="js/access_token.js")
 
     // our app
-    script(src="js/doctor/list.js" type='text/jsx')
-    script(src="js/doctor/listItem.js" type='text/jsx')
-    script(src="js/doctor/view.js" type='text/jsx')    
-
-    script(src="js/restaurant/list.js" type='text/jsx')
-    script(src="js/restaurant/listItem.js" type='text/jsx')
-    script(src="js/restaurant/view.js" type='text/jsx')    
+    script(src="js/media/list.js" type='text/jsx')
+    script(src="js/media/listItem.js" type='text/jsx')
+    script(src="js/media/view.js" type='text/jsx')      
 
     script(src="js/user/list.js" type='text/jsx')
     script(src="js/user/listItem.js" type='text/jsx')

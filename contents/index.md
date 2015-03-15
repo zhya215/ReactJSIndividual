@@ -1,4 +1,4 @@
 ---
-title: Yelp
+title: Instagram
 template: index.jade
 ---
