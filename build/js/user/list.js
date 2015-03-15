@@ -8,6 +8,7 @@ var UserList = React.createClass({displayName: 'UserList',
         $.ajax({
             url: this.props.url,
             dataType: 'json',
+            type: 'GET',
             success: function(data) {
                 this.setState({
                     data: data.data
